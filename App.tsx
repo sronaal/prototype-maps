@@ -1,13 +1,12 @@
-import { ScreenContent } from 'components/ScreenContent';
-import { StatusBar } from 'expo-status-bar';
 
 import './global.css';
 import HolaMundo from 'components/HolaMundo';
+import AppMain from 'App/AppMain';
 
 export default function App() {
   return (
     <>
-      <HolaMundo/>
+     <AppMain/>
     </>
   );
 }
