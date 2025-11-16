@@ -7,22 +7,14 @@ const Stack = createNativeStackNavigator();
 
 export default function MapNavigator() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen 
-        name="MapHome" 
-        component={MapHomeScreen}
-        options={{ title: "Mapa" }}
-      />
-      <Stack.Screen 
-        name="Markers" 
-        component={MarkersScreen} 
-        options={{ title: "Marcadores" }}
-      />
-      <Stack.Screen 
-        name="Geofences" 
-        component={GeofencesScreen}
-        options={{ title: "Geocercas" }}
-      />
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,   // ← OCULTA HEADERS INTERNOS DEL STACK
+      }}
+    >
+      <Stack.Screen name="MapHome" component={MapHomeScreen} />
+      <Stack.Screen name="Markers" component={MarkersScreen} />
+      <Stack.Screen name="Geofences" component={GeofencesScreen} />
     </Stack.Navigator>
   );
 }

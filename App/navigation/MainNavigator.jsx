@@ -36,6 +36,7 @@ export default function MainNavigator() {
       />
 
       <Tab.Screen
+        
         name="Profile"
         component={ProfileScreen}
         options={{
